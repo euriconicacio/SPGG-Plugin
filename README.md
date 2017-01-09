@@ -1,2 +1,10 @@
 # SPGG-Plugin
 Single-Point GEM (Global Earth Models) Generator QGIS Plugin
+
+O Plugin SPGG [Single-Point GEM (Global Earth Models) Generator] foi desenvolvido pelo Cap QEM/Cart EURICO LOURENÇO NICACIO JUNIOR, durante a realização de Mestrado em Ciências Geodésicas no Programa de Pós-Graduação em Ciências Geodésicas da Universidade Federal do Paraná (PPGCG-UFPR). Ele é uma adaptação da aplicaço standalone de mesmo nome.
+
+Agradecimentos ao Exército Brasileiro, em especial ao Departamento de Ciência e Tecnologia e à Diretoria de Serviço Geográfico, pela oportunidade de realização do Mestrado com dedicação integral, e ao PPGCG, em especial à Prof.ª Dr.ª Regiane Dalazoana, pela orientação e pela oportunidade de aprendizado e crescimento.
+
+BRASIL ACIMA DE TUDO!
+
+Maiores informaçes em: http://www.cienciasgeodesicas.ufpr.br/spgg/plugin.
