@@ -390,7 +390,7 @@ QGroupBox::title {
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>/home/user/.qgis2/python/plugins/SPGG/sobre.png</pixmap>
+      <pixmap>sobre.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
