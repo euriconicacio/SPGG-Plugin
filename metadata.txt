@@ -1,0 +1,39 @@
+# This file contains metadata for your plugin. Since 
+# version 2.0 of QGIS this is the proper way to supply 
+# information about a plugin. The old method of 
+# embedding metadata in __init__.py will 
+# is no longer supported since version 2.0.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=SPGG
+qgisMinimumVersion=2.0
+description=Single-Point GEM Generator
+version=1.0
+author=Eurico Nicacio - EB/UFPR
+email=euriconicacio@ufpr.br
+
+about=Atualmente, a comunidade de Geodésia tem utilizado os Modelos Globais do Geopotencial como ferramentas para diversas finalidades, tais como as determinações de alturas geoidais, anomalias da gravidade e de altitude. Devido à complexidade de obtenção dos modelos, baseada na modelagem do geopotencial e de seus derivados em harmônicos esféricos, e à necessidade de padronização destes modelos, sua gestão e disponibilização são realizadas globalmente pelo ICGEM – International Centre for Global Earth Models. Trata-se de uma organização vinculada à IAG que, entre outras atividades, disponibiliza um serviço web para geração de extratos (ou grids) de funcionais dos referidos modelos. O usuário necessita inserir as informações de especificações exigidas, como os limites de latitude norte e sul, os limites de longitudes oeste e leste e a dimensão da unidade da grade (grid step). A geração dos grids é realizada em forma de área, seguindo a modelagem em grade sobre um elipsoide de referência, e com o apoio de software livre para utilização de técnicas de tratamento de dados, dentre as quais pode-se destacar filtragem, ajuste de tendência e gridding. Entretanto, dependendo da aplicação e da precisão necessária para o resultado, o cálculo da funcional em forma de grid e sua posterior interpolação em pontos de interesse internos à área calculada fornece resultados aquém daqueles obtidos por uma geração ponto-a-ponto da mesma funcional – modalidade esta que não é contemplada pelo serviço web do ICGEM. Uma alternativa comumente empregada pelos especialistas da área, além da possibilidade de desenvolvimento de algoritmos baseados nos coeficientes dos modelos, é a realização de contato com as autoridades do ICGEM e a solicitação para cálculo preciso ponto-a-ponto, tomadas as informações dos pontos de interesse e as especificações do modelo a ser utilizado. Visando a abreviar esta tarefa, foi desenvolvido o Single-Point GEM [Global Earth Models] Generator (SPGG), uma plugin capaz de gerar e representar graficamente extratos dos modelos globais do geopotencial de forma pontual, utilizando uma lista de pontos elaborada e formatada pelo usuário e com a interação direta com o serviço web. A análise dos extratos gerados a partir do plugin em pontos do Banco de Dados Geodésicos do IBGE (Instituto Brasileiro de Geografia e Estatística) mostra que este proporciona resultados idênticos àqueles calculados pelo ICGEM, sendo ambos mais adequados do que os resultados gerados pela interpolação de extratos de área obtidos pelo serviço web. Destarte, o plugin mostra-se como uma ótima alternativa para situações em que a alta precisão dos resultados é requerida.
+
+tracker=http://www.cienciasgeodesicas.ufpr.br/spgg
+repository=http://www.cienciasgeodesicas.ufpr.br/spgg
+# End of mandatory metadata
+
+# Recommended items:
+
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=
+
+homepage=
+category=Plugins
+icon=icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+

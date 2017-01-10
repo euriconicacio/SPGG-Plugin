@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/SPGG" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
