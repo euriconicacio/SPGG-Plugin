@@ -27,7 +27,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>/home/user/.qgis2/python/plugins/SPGG/icon.png</normaloff>/home/user/.qgis2/python/plugins/SPGG/icon.png</iconset>
+    <normaloff>../../../../user/.qgis2/python/plugins/SPGG/icon.png</normaloff>../../../../user/.qgis2/python/plugins/SPGG/icon.png</iconset>
   </property>
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
@@ -45,7 +45,7 @@
     </sizepolicy>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -390,7 +390,7 @@ QGroupBox::title {
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>sobre.png</pixmap>
+      <pixmap>../../../../user/.qgis2/python/plugins/SPGG/sobre.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
