@@ -46,6 +46,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import TimeoutException
 
 
 class SPGG:
@@ -670,9 +671,9 @@ class SPGG:
             latlimit_north.send_keys(str(lat))
     
             # Height over Ellipsoid
-            h = browser.find_element_by_id('height_over_ell')
-            h.clear()
-            h.send_keys(str(h))
+            hei = browser.find_element_by_id('height_over_ell')
+            hei.clear()
+            hei.send_keys(str(h))
 
             # Maximal Degree
             max_grau = browser.find_element_by_id('max_used_degree')
@@ -686,19 +687,20 @@ class SPGG:
             start = browser.find_element_by_id('start_but')
             start.send_keys(Keys.ENTER)
             # clica GRID
-            
+
             element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.ID, 'get_but')))
             element.click()
-            time.sleep(7)
             browser.switch_to_window(browser.window_handles[1])
-            time.sleep(7)
-            print browser.page_source.encode('utf-8')
-            a = browser.page_source.encode('utf-8')[-41:-21]
-            print a
-            browser.quit()
-            display.stop()
-
-            return float(a.strip())
+            try:
+                element_present = EC.presence_of_element_located((By.XPATH, '//pre'))
+                WebDriverWait(browser, 30).until(element_present)
+                a = browser.page_source.encode('utf-8')[-36:-21]
+                browser.quit()
+                display.stop()
+                return float(a.strip())
+            except TimeoutException:
+                print("Internet issues. Please, try again.")
+                return False
         
 ####################################################################################################################
         def gera_modelos(camada, dire, modelo, func, mare, gzero, sisref, grau):
