@@ -690,6 +690,7 @@ class SPGG:
 
             element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.ID, 'get_but')))
             element.click()
+            WebDriverWait(browser, 10).until(lambda d: len(d.window_handles) == 2)
             browser.switch_to_window(browser.window_handles[1])
             try:
                 element_present = EC.presence_of_element_located((By.XPATH, '//pre'))
